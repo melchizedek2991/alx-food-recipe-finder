@@ -12,14 +12,14 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="your-logo.png" alt="Recipe Finder Logo">
+            <a href="index.html" class="nk-nav-logo">
+                <img src="img/bg20.png" alt="" width="100" class="nk-nav-logo-onscroll">
             </a>
             <!-- Mobile toggle button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+    
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <!-- Home link -->
@@ -38,17 +38,34 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#popular-categories">Popular Categories</a>
                     </li>
-                    <!-- Logout link -->
+                    <!-- Login link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Logout</a>
+                        <a class="nav-link" href="#login" style="color: white; background-color: green; border-radius: 10px; padding: 5px 15px; margin-right: 10px;">Login</a>
                     </li>
-
-
-                    
+                    <!-- Signup link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#signup" style="color: white; background-color: green; border-radius: 10px; padding: 5px 15px;">Sign Up</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+   <!------------------------------------Newsletter-------------------------------------->
+
+    <div id="popup-container" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get exclusive offers and updates by subscribing to our newsletter.</p>
+            <!-- Add action attribute to the form to specify the PHP file that will handle the submission -->
+            <form action="subscribers.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    
 
 <!-- Large background recipe cover image -->
 <div class="jumbotron">
@@ -69,27 +86,27 @@
             <ul class="scrolling-categories">
                 <li>
                     <img src="img/bg3.jpg" alt="Category 1">
-                    <span class="category-label">Category 1</span>
+                    <span class="category-label">Grilled Specialties</span>
                 </li>
                 <li>
                     <img src="img/bg4.jpg" alt="Category 2">
-                    <span class="category-label">Category 2</span>
+                    <span class="category-label">Vegetables</span>
                 </li>
                 <li>
                     <img src="img/bg5.jpg" alt="Category 3">
-                    <span class="category-label">Category 3</span>
+                    <span class="category-label">Desserts</span>
                 </li>
                 <li>
                     <img src="img/bg6.jpg" alt="Category 4">
-                    <span class="category-label">Category 4</span>
+                    <span class="category-label">Rice</span>
                 </li>
                 <li>
                     <img src="img/bg7.jpg" alt="Category 5">
-                    <span class="category-label">Category 5</span>
+                    <span class="category-label">Breakfast Favorites</span>
                 </li>
                 <li>
                     <img src="img/bg8.jpg" alt="Category 5">
-                    <span class="category-label">Category 5</span>
+                    <span class="category-label">Vegetarian Dishes</span>
                 </li>
              
                 </ul>
@@ -104,27 +121,27 @@
                 <!-- Add your duplicated list items here with new images and labels -->
                 <li>
                     <img src="img/bg9.jpg" alt="Category 6">
-                    <span class="category-label">Category 6</span>
+                    <span class="category-label">Salads</span>
                 </li>
                 <li>
                     <img src="img/bg1.jpg" alt="Category 7">
-                    <span class="category-label">Category 7</span>
+                    <span class="category-label">Pastries</span>
                 </li>
                 <li>
                     <img src="img/bg11.jpg" alt="Category 8">
-                    <span class="category-label">Category 8</span>
+                    <span class="category-label">Larb</span>
                 </li>
                 <li>
                     <img src="img/bg14.jpg" alt="Category 9">
-                    <span class="category-label">Category 9</span>
+                    <span class="category-label">Macedonia Salad</span>
                 </li>
                 <li>
                     <img src="img/bg13.jpg" alt="Category 9">
-                    <span class="category-label">Category 9</span>
+                    <span class="category-label">Okro Delicacies</span>
                 </li>
                 <li>
                     <img src="img/bg15.jpg" alt="Category 9">
-                    <span class="category-label">Category 9</span>
+                    <span class="category-label">Egg Curries</span>
                 </li>
             </ul>
         </div>
@@ -178,25 +195,52 @@
 <!----------------------------------About Us---------------------------------------------->
 <section id="about-us">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-6">
                 <img src="img/bg9.jpg" alt="About Us Image" class="img-fluid">
             </div>
             <div class="col-md-6">
                 <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis 
-                    nec justo ultricies aliquet. Nullam nec nunc ac nisi tincidunt fermentum. 
-                    Fusce auctor, velit at ultricies fermentum, justo odio tincidunt justo, 
-                    nec ultricies justo justo nec justo.
-                </p>
-                <p>Nulla facilisi. Sed vitae justo nec justo ultricies aliquet. Integer nec 
-                    justo nec justo ultricies aliquet. In hac habitasse platea dictumst. 
-                    Proin nec justo nec justo ultricies aliquet.
-                </p>
+                <p>Our project was inspired by a shared passion for creating innovative solutions that enhance user experiences. It all began with a spark of creativity during a late-night brainstorming session, where we envisioned a platform that would revolutionize how people interact with technology.</p>
+                <p>Each team member brings a unique set of skills and expertise to the project, collaborating seamlessly to turn our vision into reality. This project is a testament to our dedication, creativity, and teamwork.</p>
+                <p>This Portfolio Project for Holberton School represents our commitment to excellence and continuous learning. Explore our profiles below to learn more about our team:</p>
+            
+                <!-- Using inline styling -->
+                <div style="display: flex;">
+                    <a href="https://www.linkedin.com/in/ayodele-ayomidotun-5b7678185/" style="margin-right: 10px;">LinkedIn - Ayodele</a>
+                    <a href="https://twitter.com/AyodeleAyomido4" style="margin-right: 10px;">Twitter - Ayodele</a>
+                    <a href="https://github.com/melchizedek2991">Github - Ayodele</a>
+                </div>
+
+                <div style="display: flex;">
+                    <a href="https://www.linkedin.com/in/yuntech" style="margin-right: 10px;">LinkedIn - Yuntech</a>
+                    <a href="https://www.twitter.com/bayohorlayiwola" style="margin-right: 10px;">Twitter - Yuntech</a>
+                    <a href="https://www.github.com/Yuntech1">Github - Yuntech</a>
+                </div>
+
+
+
+                <p>Explore our project repository on GitHub: <a href="https://github.com/melchizedek2991/alx-food-recipe-finder">Recipe Finder Repository</a></p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center">
+                <img src="img/1.jpg" alt="Rounded Image 1" width="80" class="rounded-circle img-fluid">
+                <p>Tool 1</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="img/2.jpg" alt="Rounded Image 2" width="80" class="rounded-circle img-fluid">
+                <p>Tool 2</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="img/3.jpg" alt="Rounded Image 3" width="80" class="rounded-circle img-fluid">
+                <p>Tool 3</p>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <!-------------------------------------Featured categories--------------------------------------->
 
@@ -208,37 +252,37 @@
             <div class="col-md-4 text-center">
                 <div class="category-box">
                     <img src="img/bg1.jpg" alt="Category 1" class="img-fluid">
-                    <h3>Category 1</h3>
+                    <h3>Healthy Recipes</h3>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="category-box">
                     <img src="img/bg2.jpg" alt="Category 2" class="img-fluid">
-                    <h3>Category 2</h3>
+                    <h3>Wellness</h3>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="category-box">
-                    <img src="image3.jpg" alt="Category 3" class="img-fluid">
-                    <h3>Category 3</h3>
+                    <img src="img/bg17.jpg" alt="Category 3" class="img-fluid">
+                    <h3>Self-Care</h3>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="category-box">
                     <img src="img/bg4.jpg" alt="Category 4" class="img-fluid">
-                    <h3>Category 4</h3>
+                    <h3>Mindfulness</h3>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="category-box">
-                    <img src="img/bg5.jpg" alt="Category 5" class="img-fluid">
-                    <h3>Category 5</h3>
+                    <img src="img/bg21.jpg" alt="Category 5" class="img-fluid">
+                    <h3>Nutrition</h3>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="category-box">
-                    <img src="img/bg6.jpg" alt="Category 6" class="img-fluid">
-                    <h3>Category 6</h3>
+                    <img src="img/bg22.jpg" alt="Category 6" class="img-fluid">
+                    <h3>Fitness</h3>
                 </div>
             </div>
         </div>
@@ -274,13 +318,9 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>Chef Profile</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Sed et turpis nec justo ultricies aliquet. Nullam nec nunc ac nisi 
-                    tincidunt fermentum. Fusce auctor, velit at ultricies fermentum, justo odio 
-                    tincidunt justo, nec ultricies justo justo nec justo.</p>
-                <p>Nulla facilisi. Sed vitae justo nec justo ultricies aliquet. Integer nec justo nec
-                     justo ultricies aliquet. In hac habitasse platea dictumst. Proin nec justo nec justo
-                     ultricies aliquet.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis nec justo ultricies aliquet. Nullam nec nunc ac nisi tincidunt fermentum. Fusce auctor, velit at ultricies fermentum, justo odio tincidunt justo, nec ultricies justo justo nec justo.</p>
+                <p>Nulla facilisi. Sed vitae justo nec justo ultricies aliquet. Integer nec justo nec justo ultricies aliquet. In hac habitasse platea dictumst. Proin nec justo nec justo ultricies aliquet.</p>
+
             </div>
             <div class="col-md-6">
                 <img src="img/bg12.jpg" alt="Chef Image" class="img-fluid">
@@ -293,22 +333,38 @@
 
 <footer id="footer">
     <div class="container">
-        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        <p>&copy; Recipe App Finder. All Rights Reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </div>
 </footer>
 
-    <script>
-        // JavaScript to add fixed class to navbar on scroll
-        window.addEventListener('scroll', function() {
-            var navbar = document.querySelector('.navbar');
-            if (window.scrollY > 0) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
+<script>
+    // JavaScript for popup functionality
+    window.onload = function() {
+        var popupContainer = document.getElementById("popup-container");
+        popupContainer.style.display = "flex";
+
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click", function() {
+            popupContainer.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target == popupContainer) {
+                popupContainer.style.display = "none";
             }
         });
- 
+    }
+
+    // JavaScript to add fixed class to navbar on scroll
+    window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 0) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    });
 </script>
 
     <!-- Bootstrap and custom scripts -->
