@@ -40,11 +40,11 @@
                     </li>
                     <!-- Login link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/alx-food-recipe-finder/login-register1/login1.php"  style="color: white; background-color: green; border-radius: 10px; padding: 5px 15px; margin-right: 10px;">Login</a>
+                        <a class="nav-link" href="http://localhost/alx-food-recipe-finder/loginsignup/login1.php"  style="color: white; background-color: green; border-radius: 10px; padding: 5px 15px; margin-right: 10px;">Login</a>
                     </li>
                     <!-- Signup link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/alx-food-recipe-finder/login-register1/registration1.php" style="color: white; background-color: green; border-radius: 10px; padding: 5px 15px;">Sign Up</a>
+                        <a class="nav-link" href="http://localhost/alx-food-recipe-finder/loginsignup/registration1.php" style="color: white; background-color: green; border-radius: 10px; padding: 5px 15px;">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
             <h2>Subscribe to Our Newsletter</h2>
             <p>Get exclusive offers and updates by subscribing to our newsletter.</p>
             <!-- Add action attribute to the form to specify the PHP file that will handle the submission -->
-            <form action="subscribers.php" method="post">
+            <form id="newsletter-form" action="http://localhost/alx-food-recipe-finder/subscribers.php" method="post">
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
@@ -73,7 +73,7 @@
     <p>Find delicious recipes for every occasion</p>
     <!-- Start Exploring Recipes link -->
     <div class="container mt-5">
-        <a href="http://localhost/alx-food-recipe-finder/login-register1/login1.php" class="exploring-link">Start Exploring Recipes</a>
+        <a href="http://localhost/alx-food-recipe-finder/loginsignup/login1.php" class="exploring-link">Start Exploring Recipes</a>
     </div>
 </div>
 
@@ -122,7 +122,7 @@
                 <!-- Add your duplicated list items here with new images and labels -->
                 <li>
                     <img src="img/bg9.jpg" alt="Category 6">
-                    <span class="category-label">Salads recip3appfinder</span>
+                    <span class="category-label">Salads </span>
                 </li>
                 <li>
                     <img src="img/bg1.jpg" alt="Category 7">
@@ -379,6 +379,37 @@
             navbar.classList.remove('navbar-scrolled');
         }
     });
+
+    // Get the form element
+    var form = document.getElementById('newsletter-form');
+
+    // Add a submit event listener to the form
+    form.addEventListener('submit', function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Get the form data
+        var formData = new FormData(form);
+
+        // Send the form data to the server using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'subscribers.php', true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Form submission was successful, hide the popup
+                var popupContainer = document.getElementById("popup-container");
+                popupContainer.style.display = "none";
+
+                // Display a success message
+                alert('Thank you for subscribing!');
+            } else {
+                // Form submission failed, display an error message
+                alert('Error: ' + xhr.responseText);
+            }
+        };
+        xhr.send(formData);
+    });
+
 </script>
 
     <!-- Bootstrap and custom scripts -->

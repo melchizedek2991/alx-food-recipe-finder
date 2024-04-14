@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Connect to the database
     echo "Connecting to the database...<br>";
-    $conn = new mysqli('localhost', 'root', '', 'subscribers_db');
+    $conn = new mysqli('localhost', 'root', '', 'loginsignup');
 
     // Check connection
     if ($conn->connect_error) {
